@@ -11,16 +11,17 @@ public class Grid {
     private Integer width;
 
     public Grid(Integer length, Integer width) {
-        JFrame t = new JFrame();
+        JFrame jFrame = new JFrame();
         JPanel pan = new JPanel(new GridLayout(length, width));
-        Border blackline = BorderFactory.createLineBorder(Color.black, 1);
+        Border blacklines = BorderFactory.createLineBorder(Color.black, 1);
         for (int i = 0; i < length * width; i++) {
-            JPanel ptest = new JPanel();
-            ptest.setBorder(blackline);
-            pan.add(ptest);
+            JPanel cases = new JPanel();
+            cases.setBorder(blacklines);
+            pan.add(cases);
         }
-        pan.setBorder(blackline);
-        t.add(pan);
-        t.setVisible(true);
+        jFrame.setSize(1000, 500);
+        pan.setBorder(blacklines);
+        jFrame.add(pan);
+        jFrame.setVisible(true);
     }
 }
