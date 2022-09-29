@@ -3,12 +3,16 @@
  */
 package mixedword;
 
+import mixedword.Model.Grid;
+
 public class App {
     public String getGreeting() {
         return "Hello World!";
     }
 
     public static void main(String[] args) {
-        System.out.println(new App().getGreeting());
+
+        Grid grid = new Grid(10,10);
+
     }
 }
