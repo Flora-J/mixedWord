@@ -16,7 +16,7 @@ public class Menu {
     JLabel titleNameLabel;
     Font titleFont = new Font("Arial", Font.BOLD, 80);
     Font normaltext = new Font("Arial", Font.PLAIN, 28);
-    JButton startButton;
+    JButton startButton, resultButton, optionButton, exitButton;
 
     public Menu() {
         window = new JFrame();
@@ -38,13 +38,31 @@ public class Menu {
         startButtonPanel.setBounds(600, 250, 200, 100);
         startButtonPanel.setBackground(Color.GRAY);
 
-        startButton = new JButton("START");
+        startButton = new JButton("Start");
         startButton.setBackground(Color.GRAY);
         startButton.setForeground(Color.black);
         startButton.setFont(normaltext);
 
+        resultButton = new JButton("Résultats");
+        resultButton.setBackground(Color.GRAY);
+        resultButton.setForeground(Color.black);
+        resultButton.setFont(normaltext);
+
+        optionButton = new JButton("Option");
+        optionButton.setBackground(Color.GRAY);
+        optionButton.setForeground(Color.black);
+        optionButton.setFont(normaltext);
+
+        exitButton = new JButton("Exit");
+        exitButton.setBackground(Color.GRAY);
+        exitButton.setForeground(Color.black);
+        exitButton.setFont(normaltext);
+
         titleNamePanel.add(titleNameLabel);
         startButtonPanel.add(startButton);
+        startButtonPanel.add(resultButton);
+        startButtonPanel.add(optionButton);
+        startButtonPanel.add(exitButton);
 
         con.add(titleNamePanel);
         con.add(startButtonPanel);
